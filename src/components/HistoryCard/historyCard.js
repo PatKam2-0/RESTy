@@ -12,6 +12,6 @@ export default function HistoryCard({ method, url }) {
 }
 
 HistoryCard.propTypes = {
-  method: PropTypes.isString.isRequired,
-  url: PropTypes.isString.isRequired
+  method: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 };
