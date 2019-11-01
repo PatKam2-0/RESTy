@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import HistoryList from './HistoryList/HistoryList';
 import Form from './Form/Form';
+import BodyDisplay from './BodyDisplay/bodyDisplay';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Header />
       <HistoryList history={[{}]}/>
       <Form method={{}}/>
+      <BodyDisplay response={'Test Response'}/>
       <Footer />
     </>
   );
