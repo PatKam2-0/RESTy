@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HistoryCard from '../HistoryCard/historyCard';
+import HistoryCard from '../HistoryCard/HistoryCard';
 
 const History = ({ history }) => {
   const historyElements = history.map(historyItem => (
