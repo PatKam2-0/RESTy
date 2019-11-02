@@ -9,19 +9,19 @@ export default function Form({ method }) {
         <section>
           <input type="text" placeholder="Text Here"></input>
           <div>
-            <label htmlFor="GET">
+            <label htmlFor="GET">GET
               <input type="radio" name="method" value="GET" id="GET"></input>
             </label>
-            <label htmlFor="POST">
+            <label htmlFor="POST">POST
               <input type="radio" name="method" value="POST" id="POST"></input>
             </label>
-            <label htmlFor="PUT">
+            <label htmlFor="PUT">PUT
               <input type="radio" name="method" value="PUT" id="PUT"></input>
             </label>
-            <label htmlFor="PATCH">
+            <label htmlFor="PATCH">PATCH
               <input type="radio" name="method" value="PATCH" id="PATCH"></input>
             </label>
-            <label htmlFor="DELETE">
+            <label htmlFor="DELETE">DELETE
               <input type="radio" name="method" value="DELETE" id="DELETE"></input>
             </label>
             <button>Go!</button>
