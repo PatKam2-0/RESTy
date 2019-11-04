@@ -21,8 +21,9 @@ export default class Form extends Component {
     event.preventDefault();
     getApi(this.state.url, this.state.name)
       .then(result => {
-        this.setState({ apiResponses: result });
-        this.setState(state => ({ history: [{ url: this.setState.url, method: this.setState.method }, ...state.history] }));
+        console.log(this.state);
+        this.setState({ apiResponses: result.results  });
+        this.setState(state => ({ history: [{ url: this.state.url, method: this.state.method }, ...state.history] }));
       });
   }
 
@@ -57,7 +58,7 @@ export default class Form extends Component {
             <textarea name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
           </div>
           <div>
-            <BodyDisplay results={this.state.apiResponses} />
+            <BodyDisplay apiResponses={this.state.apiResponses} />
           </div>
         </form>
       </>
