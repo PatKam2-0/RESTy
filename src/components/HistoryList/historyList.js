@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HistoryCard from '../HistoryCard/HistoryCard';
+import HistoryCard from '../HistoryCard/historyCard';
 
 const History = ({ history }) => {
-  const historyElements = history.map((historyItem, i) => (
-    <HistoryCard key={i}{...historyItem} />
+  const historyElements = history.map(historyItem => (
+    <li key={`${historyItem.method}-${historyItem.url}`}>
+      <HistoryCard {...historyItem} />
+    </li>
   ));
+
   return (
     <>
       <h1>History:</h1>
@@ -18,8 +21,8 @@ const History = ({ history }) => {
 
 History.propTypes = {
   history: PropTypes.arrayOf(PropTypes.shape({
-    method: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
+    method: PropTypes.string,
+    url: PropTypes.string
 
   }))
 };

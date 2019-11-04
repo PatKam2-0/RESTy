@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function HistoryCard({ url, method }) {
+const HistoryCard = ({ url, method }) => {
 
   return (
     <>
@@ -9,9 +9,11 @@ export default function HistoryCard({ url, method }) {
       <p>{method}</p>
     </>
   );
-}
+};
 
 HistoryCard.propTypes = {
   url: PropTypes.string,
   method: PropTypes.string
 };
+
+export default HistoryCard;

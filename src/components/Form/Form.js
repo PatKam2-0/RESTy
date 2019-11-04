@@ -33,22 +33,22 @@ export default class Form extends Component {
         <HistoryList history={this.state.history} />
         <form onSubmit={this.handleSubmit}>
           <section>
-            <input type="text" name="url" value={this.state.url} onChange={this.handleChange}></input>
+            <input type="text" name="url" value={this.state.url} onChange={this.handleChange} />
             <div>
               <label htmlFor="GET">GET
-                <input type="radio" name="method" value="GET" id="GET" onChange={this.handleChange}></input>
+                <input type="radio" name="method" value="GET" id="GET" onChange={this.handleChange} />
               </label>
               <label htmlFor="POST">POST
-                <input type="radio" name="method" value="POST" id="POST" onChange={this.handleChange}></input>
+                <input type="radio" name="method" value="POST" id="POST" onChange={this.handleChange} />
               </label>
               <label htmlFor="PUT">PUT
-                <input type="radio" name="method" value="PUT" id="PUT" onChange={this.handleChange}></input>
+                <input type="radio" name="method" value="PUT" id="PUT" onChange={this.handleChange} />
               </label>
               <label htmlFor="PATCH">PATCH
-                <input type="radio" name="method" value="PATCH" id="PATCH" onChange={this.handleChange}></input>
+                <input type="radio" name="method" value="PATCH" id="PATCH" onChange={this.handleChange} />
               </label>
               <label htmlFor="DELETE">DELETE
-                <input type="radio" name="method" value="DELETE" id="DELETE" onChange={this.handleChange}></input>
+                <input type="radio" name="method" value="DELETE" id="DELETE" onChange={this.handleChange} />
               </label>
               <button>Go!</button>
             </div>
@@ -57,7 +57,7 @@ export default class Form extends Component {
             <textarea name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
           </div>
           <div>
-            <BodyDisplay results={this.state.results} />
+            <BodyDisplay results={this.state.apiResponses} />
           </div>
         </form>
       </>
