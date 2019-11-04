@@ -5,11 +5,13 @@ export default function BodyDisplay({ response }) {
 
   return (
     <>
-      <section>{response}</section>
+      <p>
+        Response: {JSON.stringify(response, null, 2)}
+      </p>
     </>
   );
 }
 
 BodyDisplay.propTypes = {
-  response: PropTypes.string.isRequired
+  response: PropTypes.array
 };
