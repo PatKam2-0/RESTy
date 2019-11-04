@@ -14,7 +14,7 @@ export default class Form extends Component {
   };
 
   handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value })
+    this.setState({ [target.name]: target.value });
   }
 
   handleSubmit = (event) => {
@@ -23,41 +23,44 @@ export default class Form extends Component {
       .then(result => {
         this.setState({ apiResponses: result });
         this.setState(state => ({ history: [{ url: this.setState.url, method: this.setState.method }, ...state.history] }));
-      })
+      });
+  }
+
+  render() {
+    return (
+
+      <>
+        <HistoryList history={this.state.history} />
+        <form onSubmit={this.handleSubmit}>
+          <section>
+            <input type="text" placeholder="Text Here" value={this.state.url} onChange={this.handleChange}></input>
+            <div>
+              <label htmlFor="GET">GET
+                <input type="radio" name="method" value="GET" id="GET" onChange={this.handleChange}></input>
+              </label>
+              <label htmlFor="POST">POST
+                <input type="radio" name="method" value="POST" id="POST" onChange={this.handleChange}></input>
+              </label>
+              <label htmlFor="PUT">PUT
+                <input type="radio" name="method" value="PUT" id="PUT" onChange={this.handleChange}></input>
+              </label>
+              <label htmlFor="PATCH">PATCH
+                <input type="radio" name="method" value="PATCH" id="PATCH" onChange={this.handleChange}></input>
+              </label>
+              <label htmlFor="DELETE">DELETE
+                <input type="radio" name="method" value="DELETE" id="DELETE" onChange={this.handleChange}></input>
+              </label>
+              <button>Go!</button>
+            </div>
+          </section>
+          <div id="body">
+            <textarea placeholder="Raw JSON Body" name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
+          </div>
+          <div>
+            <BodyDisplay results={this.state.results} />
+          </div>
+        </form>
+      </>
+    );
   }
 }
-
-return (
-  <>
-    <form onChange={method}>
-      <section>
-        <input type="text" placeholder="Text Here"></input>
-        <div>
-          <label htmlFor="GET">GET
-              <input type="radio" name="method" value="GET" id="GET"></input>
-          </label>
-          <label htmlFor="POST">POST
-              <input type="radio" name="method" value="POST" id="POST"></input>
-          </label>
-          <label htmlFor="PUT">PUT
-              <input type="radio" name="method" value="PUT" id="PUT"></input>
-          </label>
-          <label htmlFor="PATCH">PATCH
-              <input type="radio" name="method" value="PATCH" id="PATCH"></input>
-          </label>
-          <label htmlFor="DELETE">DELETE
-              <input type="radio" name="method" value="DELETE" id="DELETE"></input>
-          </label>
-          <button>Go!</button>
-        </div>
-      </section>
-      <section>
-        <div id="body">
-          <textarea placeholder="Raw JSON Body" name="requestBody"></textarea>
-        </div>
-      </section>
-    </form>
-  </>
-);
-}
-
