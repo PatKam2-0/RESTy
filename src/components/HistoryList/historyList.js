@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HistoryCard from '../HistoryCard/historyCard';
+import HistoryCard from '../HistoryCard/HistoryCard';
+import styles from './HistoryList.css';
 
 const History = ({ history }) => {
   const historyElements = history.map(historyItem => (
@@ -11,10 +12,12 @@ const History = ({ history }) => {
 
   return (
     <>
-      <h1>History:</h1>
-      <ul>
-        {historyElements}
-      </ul>
+      <section className={styles}>
+        <h1>History:</h1>
+        <ul>
+          {historyElements}
+        </ul>
+      </section>
     </>
   );
 };

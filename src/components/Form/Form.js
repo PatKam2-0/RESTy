@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import getApi from '../../services/api';
-import BodyDisplay from '../BodyDisplay/bodyDisplay';
+import BodyDisplay from '../BodyDisplay/BodyDisplay';
 import HistoryList from '../HistoryList/historyList';
 
 export default class Form extends Component {
