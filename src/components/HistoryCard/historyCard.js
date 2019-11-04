@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function HistoryCard({ method, url }) {
+export default function HistoryCard({ url, method }) {
 
   return (
     <>
-      <h3>{method}</h3>
       <p>{url}</p>
+      <p>{method}</p>
     </>
   );
 }
 
 HistoryCard.propTypes = {
-  method: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string,
+  method: PropTypes.string
 };

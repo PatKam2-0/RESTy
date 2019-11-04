@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import HistoryCard from '../HistoryCard/HistoryCard';
 
 const History = ({ history }) => {
-  const historyElements = history.map(historyItem => (
-    <li key={`${historyItem.method}-${historyItem.url}`}>
-      <HistoryCard {...historyItem} />
-    </li>
+  const historyElements = history.map((historyItem, i) => (
+    <HistoryCard key={i}{...historyItem} />
   ));
   return (
-    <ul>
-      {historyElements}
-    </ul>
+    <>
+      <h1>History:</h1>
+      <ul>
+        {historyElements}
+      </ul>
+    </>
   );
 };
 

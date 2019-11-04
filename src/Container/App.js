@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Form method={{}}/>
+      <Form />
       <Footer />
     </>
   );

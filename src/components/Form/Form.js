@@ -33,7 +33,7 @@ export default class Form extends Component {
         <HistoryList history={this.state.history} />
         <form onSubmit={this.handleSubmit}>
           <section>
-            <input type="text" placeholder="Text Here" value={this.state.url} onChange={this.handleChange}></input>
+            <input type="text" name="url" value={this.state.url} onChange={this.handleChange}></input>
             <div>
               <label htmlFor="GET">GET
                 <input type="radio" name="method" value="GET" id="GET" onChange={this.handleChange}></input>
@@ -54,7 +54,7 @@ export default class Form extends Component {
             </div>
           </section>
           <div id="body">
-            <textarea placeholder="Raw JSON Body" name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
+            <textarea name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
           </div>
           <div>
             <BodyDisplay results={this.state.results} />
