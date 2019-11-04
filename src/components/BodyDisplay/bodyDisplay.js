@@ -6,7 +6,7 @@ export default function BodyDisplay({ apiResponses }) {
   return (
     <>
       <p>
-        Response: {JSON.stringify(apiResponses, null, 2)}
+        Response: {JSON.stringify(apiResponses, null, 0)}
       </p>
     </>
   );

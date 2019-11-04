@@ -24,6 +24,7 @@ export default class Form extends Component {
         console.log(result);
         this.setState({ apiResponses: result.results  });
         this.setState(state => ({ history: [{ url: this.state.url, method: this.state.method }, ...state.history] }));
+        console.log(this.state);
       });
   }
 
@@ -55,7 +56,7 @@ export default class Form extends Component {
             </div>
           </section>
           <div id="body">
-            <textarea name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
+            <textarea type="text" name="requestBody" value={this.state.jsonEntry} onChange={this.handleChange} ></textarea>
           </div>
           <div>
             <BodyDisplay apiResponses={this.state.apiResponses} />
