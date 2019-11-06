@@ -21,10 +21,8 @@ export default class Form extends Component {
     event.preventDefault();
     getApi(this.state.url, this.state.name)
       .then(result => {
-        console.log(result);
         this.setState({ apiResponses: result.results  });
         this.setState(state => ({ history: [{ url: this.state.url, method: this.state.method }, ...state.history] }));
-        console.log(this.state);
       });
   }
 
