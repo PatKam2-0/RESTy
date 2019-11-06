@@ -4,7 +4,7 @@ import styles from './Footer.css';
 
 const Footer = () => (
   <footer>
-    <h2 className={styles}>©2019 Alchemy Code Lab</h2>
+    <h2 className={styles}>©2019 Alchemy Code Lab - Kam Ali and Pat Haynes</h2>
   </footer>
 );
 
